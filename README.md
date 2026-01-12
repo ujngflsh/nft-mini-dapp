@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 NFT Mini dApp
 
-## Getting Started
+A simple and clean Web3 NFT dApp that allows users to upload images to IPFS, preview CID, connect wallet, and mint NFTs — all in a single page.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![App Screenshot](./screnshoots.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔗 Connect Wallet (MetaMask + Wagmi + RainbowKit)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📤 Upload image to IPFS (Pinata / Web3Storage ready)
 
-## Learn More
+🖼️ Live image preview before uploading
 
-To learn more about Next.js, take a look at the following resources:
+📋 CID preview + copy button
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🪙 Mint NFT to deployed smart contract (Sepolia)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+⚡ Fully Single-Page UX — simple, fast, and user-friendly
 
-## Deploy on Vercel
+🏗️ Built with modern Next.js App Router
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📁 Project Structure
+
+src/
+ ├── app/
+ │    ├── page.tsx             # Main single-page dApp
+ │    ├── upload/page.tsx      # Optional separate uploader page
+ │    └── mint/page.tsx        # Optional mint page
+ ├── components/
+ │    ├── WalletConnect.tsx
+ │    └── NFTUploader.tsx
+ ├── lib/
+ │    └── wagmi.ts
+contracts/
+ ├── MyNFT.sol                  # ERC-721 NFT Smart Contract
+scripts/
+ └── deploy.ts
+
+
+🛠️ Getting Started
+
+1️⃣ Install dependencies
+    npm install
+
+2️⃣ Run development server
+    npm run dev
+
+    Open In Browser
+
+👉 http://localhost:3000
+
+🔧 Deploying the Smart Contract
+
+    If you're using Hardhat:
+
+    npx hardhat run scripts/deploy.ts --network sepolia
+
+    Save:
+
+    Contract Address
+
+    ABI Folder (artifacts)
+
+    🧪 Tech Stack
+
+        Next.js 14 (App Router)
+
+        React 19
+
+        TailwindCSS
+
+        Wagmi + Viem
+
+        Alchemy / Infura RPC
+
+        Pinata or Web3Storage
+
+        Hardhat
+
+        
+        📦 Build for Production
+         
+        npm run build
+
+        npm run start
+
+        🌍 Deployment Options
+
+        You can deploy the frontend on:
+
+        Vercel
+
+        Netlify
+
+        AWS Amplify
+
+        📜 License
+
+        MIT License.
