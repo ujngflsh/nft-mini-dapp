@@ -1,102 +1,110 @@
-🚀 NFT Mini dApp
+# 🚀 NFT Mini dApp
 
 A simple and clean Web3 NFT dApp that allows users to upload images to IPFS, preview CID, connect wallet, and mint NFTs — all in a single page.
 
+---
 
-![App Screenshot](./screnshoots.png)
+## 🖼️ Screenshot
 
-✨ Features
+![App Screenshot](./screnshoots.PNG)
 
-🔗 Connect Wallet (MetaMask + Wagmi + RainbowKit)
+---
 
-📤 Upload image to IPFS (Pinata / Web3Storage ready)
+## ✨ Features
 
-🖼️ Live image preview before uploading
+- 🔗 Connect Wallet (MetaMask + Wagmi + RainbowKit)
+- 📤 Upload image to IPFS (Pinata / Web3Storage ready)
+- 🖼️ Live image preview before uploading
+- 📋 CID preview + copy button
+- 🪙 Mint NFT to deployed smart contract (Sepolia)
+- ⚡ Fully Single-Page UX — simple, fast, and user-friendly
+- 🧱 Built with modern Next.js App Router
 
-📋 CID preview + copy button
+---
 
-🪙 Mint NFT to deployed smart contract (Sepolia)
+## 📁 Project Structure
 
-⚡ Fully Single-Page UX — simple, fast, and user-friendly
-
-🏗️ Built with modern Next.js App Router
-
-
-📁 Project Structure
-
-src/
- ├── app/
- │    ├── page.tsx             # Main single-page dApp
- │    ├── upload/page.tsx      # Optional separate uploader page
- │    └── mint/page.tsx        # Optional mint page
- ├── components/
- │    ├── WalletConnect.tsx
- │    └── NFTUploader.tsx
- ├── lib/
- │    └── wagmi.ts
-contracts/
- ├── MyNFT.sol                  # ERC-721 NFT Smart Contract
-scripts/
- └── deploy.ts
+```text
+nft-mini-dapp/
+├── .env.local
+├── .gitignore
+├── .next/
+├── artifacts/
+├── cache/
+├── contracts/
+├── eslint.config.mjs
+├── hardhat.config.js
+├── ignition/
+├── next-env.d.ts
+├── next.config.ts
+├── node_modules/
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public/
+├── README.md
+├── screnshoots.PNG
+├── scripts/
+├── src/
+│   ├── app/
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── mint/page.tsx
+│   │   └── upload/page.tsx
+│   ├── components/
+│   │   ├── NFTUploader.tsx
+│   │   └── WalletConnect.tsx
+│   └── lib/
+│       └── wagmi.ts
+├── test/
+├── tsconfig.json
+└── types/
 
 
 🛠️ Getting Started
-
 1️⃣ Install dependencies
-    npm install
+npm install
 
 2️⃣ Run development server
-    npm run dev
+npm run dev
 
-    Open In Browser
 
+Open in browser:
 👉 http://localhost:3000
 
 🔧 Deploying the Smart Contract
 
-    If you're using Hardhat:
+Using Hardhat:
 
-    npx hardhat run scripts/deploy.ts --network sepolia
+npx hardhat run scripts/deploy.ts --network sepolia
 
-    Save:
 
-    Contract Address
+Save:
 
-    ABI Folder (artifacts)
+Contract Address
 
-    🧪 Tech Stack
+ABI folder (artifacts)
 
-        Next.js 14 (App Router)
+🧪 Tech Stack
 
-        React 19
+Next.js 14 (App Router)
 
-        TailwindCSS
+React 19
 
-        Wagmi + Viem
+TailwindCSS
 
-        Alchemy / Infura RPC
+Wagmi + Viem
 
-        Pinata or Web3Storage
+RainbowKit
 
-        Hardhat
+Alchemy / Infura
 
-        
-        📦 Build for Production
-         
-        npm run build
+Pinata / Web3Storage
 
-        npm run start
+Hardhat
 
-        🌍 Deployment Options
-
-        You can deploy the frontend on:
-
-        Vercel
-
-        Netlify
-
-        AWS Amplify
-
-        📜 License
-
-        MIT License.
+📦 Build for Production
+npm run build
+npm run start
