@@ -6,21 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "compile": "hardhat compile",
+    "test": "hardhat test"
   },
   "dependencies": {
-    "next": "16.0.10",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "@openzeppelin/contracts": "^5.0.0",
+    "@rainbow-me/rainbowkit": "^2.2.10",
+    "dotenv": "^16.4.5",
+    "next": "^16.0.10",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "viem": "^2.44.1",
+    "wagmi": "^2.19.5"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.10",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^22.0.0",
+    "@types/react": "19.2.8",
+    "autoprefixer": "^10.4.23",
+    "chai": "^4.3.10",
+    "ethers": "^6.16.0",
+    "hardhat": "^2.22.3",
+    "mocha": "^10.4.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.8.0"
   }
 }
